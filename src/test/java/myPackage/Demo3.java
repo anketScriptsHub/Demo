@@ -11,8 +11,9 @@ public class Demo3 {
 		
 		//Now add something in github
 		
-		
-		
+
+		//It's better to add method in eclipse
+		System.out.println("Added one method");
 		
 		
 	}
