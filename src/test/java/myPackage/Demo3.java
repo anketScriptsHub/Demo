@@ -12,6 +12,11 @@ public class Demo3 {
 		
 >>>>>>> f75abd009ac278f38e6a4cb2f2c3dc919920f66c
 		
+
+
+
+
+//Commited
 	}
 
 }
