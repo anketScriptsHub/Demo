@@ -7,6 +7,7 @@ public class Demo4 {
 		//Something is added from Eclipse 
 		//No need to make changes
 //Line 9
+		
 		//Do while
 		//Write after creation
 		//Created
