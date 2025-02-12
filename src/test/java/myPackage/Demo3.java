@@ -1,7 +1,9 @@
 package myPackage;
 
-public class Demo3 {
+public class Demo3 
 
-	// No main method
-	
+public static void main (String [] args){
+   {
+	// Add main method
+    }
 }
