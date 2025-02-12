@@ -1,3 +1,9 @@
+trigger:
+- master
+
+pool:
+  vmImage: 'windows-latest'  # Use Windows-based agent image
+
 steps:
 - task: Maven@3
   inputs:
@@ -9,7 +15,3 @@ steps:
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
     goals: 'package'
-
-- script: |
-    java -jar target/your-application.jar
-  displayName: 'Run the application'
