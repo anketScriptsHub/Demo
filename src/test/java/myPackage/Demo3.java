@@ -31,6 +31,12 @@ public class Demo3 {
 		
 		
 		//Git status
+
+
+		System.out.println("Added one method");
+
+
+		//Done
 		
 		
 		
