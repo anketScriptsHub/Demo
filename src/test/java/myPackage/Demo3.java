@@ -2,13 +2,10 @@ package myPackage;
 
 public class Demo3 {
 
-	// No main method
-	
-	
-	public void m1() {
+	public static void main(String[] args) {
 		
-		
+		//New Check
+
 	}
-	
-	
+
 }
