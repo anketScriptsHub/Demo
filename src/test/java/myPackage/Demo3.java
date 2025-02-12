@@ -22,6 +22,15 @@ public class Demo3 {
 		
 		
 		
+
+
+		//It's better to add method in eclipse
+		System.out.println("Added one method");
+
+		
+		
+		
+		//Git status
 		
 		
 	}
