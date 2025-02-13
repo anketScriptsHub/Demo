@@ -24,3 +24,13 @@ steps:
     mavenPomFile: 'pom.xml'
     options: '-Dtest=**/SeleniumTests.java'  # Run specific Selenium test classes or suites
     goals: 'test'  # Run tests after building the project
+- task: Maven@4
+  inputs:
+    mavenPomFile: 'pom.xml'
+    publishJUnitResults: true
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
