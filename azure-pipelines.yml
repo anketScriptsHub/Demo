@@ -1,36 +1,22 @@
+# Maven
+# Build your Java project and run tests with Apache Maven.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/java
+
 trigger:
-  branches:
-    include:
-      - main  # Trigger the pipeline on push to the main branch
+- master
 
 pool:
-  vmImage: 'windows-latest'  # Use Windows-based agents for the build
+  vmImage: windows-latest
 
 steps:
-# Step 1: Install Java using built-in task
-- task: JavaToolInstaller@0
-  inputs:
-    versionSpec: '11'  # Specify the Java version you need
-
-# Step 2: Set up Maven and build the project using the built-in Maven task
-- task: Maven@3
-  inputs:
-    mavenPomFile: 'pom.xml'  # Path to your Maven pom.xml
-    goals: 'clean install'    # Build the project
-
-# Step 3: Run Selenium Tests (with Maven)
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
-    options: '-Dtest=**/SeleniumTests.java'  # Run specific Selenium test classes or suites
-    goals: 'test'  # Run tests after building the project
-- task: Maven@4
-  inputs:
-    mavenPomFile: 'pom.xml'
+    mavenOptions: '-Xmx3072m'
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.11'
+    jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    javaHomeOption: 'JDKVersion'
-    mavenVersionOption: 'Default'
-    mavenAuthenticateFeed: false
-    effectivePomSkip: false
-    sonarQubeRunAnalysis: false
+    goals: 'package'
