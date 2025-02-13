@@ -4,10 +4,12 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/java
 
 trigger:
-- master
+  branches:
+    include:
+      - master  # Ensure you are pushing changes to this branch
 
 pool:
-  vmImage: windows-latest
+  vmImage: 'windows-latest'
 
 steps:
 - task: Maven@3
