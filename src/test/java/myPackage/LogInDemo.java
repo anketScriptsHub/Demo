@@ -13,7 +13,7 @@ public class LogInDemo {
 		
 		ChromeOptions options = new ChromeOptions();
 		
-		options.addArguments("--headless");
+	//	options.addArguments("--headless");
 		
 		WebDriver driver = new ChromeDriver(options);
 
@@ -22,6 +22,10 @@ public class LogInDemo {
 		driver.manage().window().maximize();
 		
 		driver.get("https://www.facebook.com/login/");
+		
+		System.out.println("Update the code on DevOps");
+		
+		driver.close();
 		
 		
 	}
