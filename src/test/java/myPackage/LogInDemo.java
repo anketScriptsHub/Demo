@@ -23,7 +23,9 @@ public class LogInDemo {
 		
 		driver.get("https://www.facebook.com/login/");
 		
-		System.out.println("Update the code on DevOps");
+		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("ABCD");
+		
+		System.out.println("Done");
 		
 		driver.close();
 		
