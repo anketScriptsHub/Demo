@@ -6,7 +6,8 @@
 trigger:
   branches:
     include:
-      - master  # Ensure you are pushing changes to this branch
+      - master  
+      - myBranch
 
 pool:
   vmImage: 'windows-latest'

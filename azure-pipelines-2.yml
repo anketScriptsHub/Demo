@@ -1,0 +1,21 @@
+trigger:
+  branches:
+    include:
+      - master  # This ensures the pipeline triggers on changes to the master branch
+
+pool:
+  vmImage: 'windows-latest'  # Specifies the VM image for the build agent
+
+steps:
+- checkout: self  # This ensures that the latest code from the repository is checked out
+
+- task: Maven@3
+  inputs:
+    mavenPomFile: 'pom.xml'  # Path to your Maven POM file
+    mavenOptions: '-Xmx3072m'  # JVM options for Maven
+    javaHomeOption: 'JDKVersion'  # Specifies the JDK version
+    jdkVersionOption: '1.11'  # Java 11
+    jdkArchitectureOption: 'x64'  # 64-bit architecture
+    publishJUnitResults: true  # Publish test results
+    testResultsFiles: '**/surefire-reports/TEST-*.xml'  # Path to JUnit test results
+    goals: 'package'  # Goals to run, e.g., compile and package
