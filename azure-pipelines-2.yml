@@ -8,7 +8,7 @@ pool:
 
 steps:
 - checkout: self  # This ensures that the latest code from the repository is checked out
-  fetchDepth: 1
+  fetchDepth: 0
 
 - task: Maven@3
   inputs:
