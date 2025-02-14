@@ -23,7 +23,7 @@ public class LogInDemo {
 		
 		driver.get("xyz");
 		
-		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("ABCD");
+		driver.findElement(By.xpath("//input[@")).sendKeys("ABCD");
 		
 		System.out.println("Done");
 		
