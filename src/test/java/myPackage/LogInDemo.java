@@ -21,13 +21,13 @@ public class LogInDemo {
 		
 		driver.manage().window().maximize();
 		
-		driver.get("https://www.facebook.com/login/");
+		driver.get("xyz");
 		
 		driver.findElement(By.xpath("//input[@id='email']")).sendKeys("ABCD");
 		
 		System.out.println("Done");
 		
-		driver.close();
+	//	driver.close();
 		
 		
 		System.out.println("Updated code on Friday....!!!!!!");
