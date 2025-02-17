@@ -21,7 +21,7 @@ public class LogInDemo {
 
 		driver.manage().window().maximize();
 
-		driver.get("xyz");
+		driver.get("");
 
 		driver.findElement(By.xpath("//input[@")).sendKeys("ABCD");
 
